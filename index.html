@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- se guarda los elementos en una calse principal contenedor-->
+  <div class="container">
+    <!--se declara el perfil con la fecha, luego el nombre del usuario
+    un input solicitando el nombre y el boton de aceptar-->
+  <div class="perfil">
+    <div id="fecha"></div>
+    <div id="nombreUsuario">
+      <input type="text" id="inputNombre" placeholder="Ingresa tu nombre...">
+      <button id="btnNombre">Aceptar</button>
+    </div>
+    <h1 id="saludoNombre"></h1>
+    <span id="bienvenida">¡Bienvenido! Completa tu nombre para empezar.</span>
+  </div>
+<!-- se guarda los elementos en una clase agregarTarea-->
+  <div class="agregarTarea">
+    <input type ="text" id="inputTarea"  placeholder="Escribe una tarea...">
+    <button id="btnAgregar">Agregar tarea</button>
+  </div>
+<!-- se declara la seccion tareas donde limitara donde empiezan las tareas del usuario-->
+  <div class="seccionTareas">
+  <h3>Estas son tus tareas</h3>
+    <ul id="lista">
+    </ul>
+  </div>
+
+</div>
+
+<script src ="script.js"></script>
+</body>
+</html>
+

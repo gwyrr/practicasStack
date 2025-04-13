@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --purple: #9351be;
+  --blue-ligth: #add8e6;
+  --blue-dark: #21218f;
+  --green: #3bc082;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--purple), var(--blue-ligth));
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 80%;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* Perfil */
+.perfil h1 {
+  color: var(--white);
+}
+
+.perfil span {
+  font-size: 26px;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+#fecha {
+  color: var(--white);
+  padding: 50px 0 5px 0;
+}
+
+/* Agregar tareas */
+.agregarTarea {
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 70px;
+  margin: 40px 0;
+}
+
+.agregarTarea inputTarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--white);
+}
+
+.agregarTarea #btnAgregar {
+  font-size: 15px;
+  background-color: var(--purple);
+}
+
+.agregarTarea #btnAgregar:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition-duration: 100ms;
+}
+
+.agregarTarea inputTarea::placeholder {
+  font-size: 1.1rem;
+  color: var(--purple);
+}
+
+/* Sección tareas */
+.seccionTareas h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.seccionTareas li {
+  display: flex;
+  background: linear-gradient(to bottom, var(--blue-dark), var(--green));
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: var(--white);
+}
+
+/* Checkbox pendiente de diseño futuro */
+/* .seccionTareas checkbox {} */
+
+#borrar:hover {
+  color: var(--blue-dark);
+  cursor: pointer;
+}
+
+.seccionTareas > ul p {
+  font-size: 1.2rem;
+}
+
+/* Ocultar input nombre */
+.oculto {
+  display: none;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablets (≥768px) */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 600px;
+    height: auto;
+  }
+
+  .agregarTarea {
+    gap: 20px;
+  }
+
+  .agregarTarea inputTarea::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .seccionTareas > ul p {
+    font-size: 1.3rem;
+  }
+
+  .perfil span {
+    font-size: 28px;
+  }
+}
+
+/* Pantallas grandes (≥1024px) */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 800px;
+    padding: 2rem;
+  }
+
+  .agregarTarea {
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .agregarTarea #btnAgregar {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .perfil span {
+    font-size: 30px;
+  }
+
+  #fecha {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+}
+
+/* Modo oscuro automático (si lo quieres más pro) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to bottom, #1e1e1e, #333);
+    color: var(--white);
+  }
+
+  .agregarTarea,
+  .seccionTareas li {
+    background-color: #2a2a2a;
+  }
+
+  input,
+  button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+  }
+
+  button:hover {
+    background-color: #666;
+  }
+}
