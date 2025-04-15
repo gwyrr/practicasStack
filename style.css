@@ -30,7 +30,7 @@ body {
   color: var(--white);
 }
 
-.perfil span {
+.perfil p {
   font-size: 26px;
   color: var(--white);
   letter-spacing: 1px;
